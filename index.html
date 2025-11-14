@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bubble Shooter</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="ui">
+    <h1>Bubble Shooter</h1>
+    <div id="controls">
+      <div>Score: <span id="score">0</span></div>
+      <div>Lives: <span id="lives">3</span></div>
+      <button id="restartBtn">Restart</button>
+    </div>
+    <div id="leaderboard">
+      <h3>Top Scores</h3>
+      <ol id="scoresList"></ol>
+    </div>
+  </div>
+  <canvas id="game" width="640" height="800"></canvas>
+
+  <div id="submitScoreModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Submit Your Score</h3>
+      <label>
+        Name:
+        <input id="playerName" type="text" placeholder="Your name" />
+      </label>
+      <div class="modal-actions">
+        <button id="submitScoreBtn">Submit</button>
+        <button id="closeModalBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./game.js"></script>
+  <script src="./db.js"></script>
+  <script src="./server.js"></script>
+</body>
+</html>
